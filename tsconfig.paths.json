@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@svg/*": [
+                "src/styles/svg/*"
+            ],
+            "@com/*": [
+                "src/components/common/*"
+            ],
+            "@c/*": [
+                "src/components/*"
+            ],
+            "@/*": [
+                "src/*"
+            ],
+            "@r/*": [
+                "src/reducers/*"
+            ],
+        }
+    }
+}

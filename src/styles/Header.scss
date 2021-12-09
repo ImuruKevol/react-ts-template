@@ -1,0 +1,59 @@
+@use "./common/color.scss" as color;
+@use "./common/util.scss" as util;
+
+header {
+  display: flex;
+  padding: 20px;
+  background-color: #d8ecff;
+  @include util.clear;
+
+  .logo {
+    display: inline-block;
+    width: 280px;
+    height: 50px;
+  }
+  
+  .nav-area {
+    $tab-size: 250px;
+    display: inline-block;
+    width: $tab-size * 3;
+    margin: 0 auto;
+
+    .nav {
+      border: 0;
+    }
+
+    .nav-item .nav-link {
+      color: #4a4a4a;
+      border: 0;
+      font-family: "neo-bold";
+      font-size: 24px;
+
+      &.active {
+        background-color: transparent;
+        color: #000;
+        font-size: 28px;
+      }
+    }
+  }
+
+  .btn-area {
+    float: right;
+
+    .btn-login {
+      width: 230px;
+      height: 100%;
+      border-radius: 30px;
+
+      font-family: "neo-bold";
+      background-color: color.$btn-bg;
+      color: color.$white;
+      font-size: 1.1rem;
+
+      &:hover {
+        background-color: color.$btn-bg-hover;
+        color: color.$caption;
+      }
+    }
+  }
+}

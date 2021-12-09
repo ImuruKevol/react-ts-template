@@ -1,0 +1,83 @@
+@use "./common/color.scss" as color;
+@use "./common/util.scss" as util;
+
+.main {
+  padding-top: 50px;
+
+  h2 {
+    color: #404040;
+    font-family: "neo-bold";
+  }
+
+  .table-action {
+    @include util.clear;
+
+    button {
+      float: right;
+      height: 44px;
+      border-radius: 22px;
+      padding: 10px 30px;
+      font-family: "neo-semibold";
+      line-height: 28px;
+      border: 0;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: text-bottom;
+        margin: 2px 5px 2px 0;
+      }
+
+      &.save {
+        background-color: #81c0ff;
+        font-size: 18px;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      &.add {
+        background-color: #81c0ff;
+        &::before {
+          background: no-repeat left / contain url(img/icon-add-white.png);
+        }
+      }
+
+      &.delete {
+        background-color: #898989;
+        &::before {
+          background: no-repeat left / contain url(img/icon-delete-white.png);
+        }
+      }
+    }
+
+    button + button {
+      margin-right: 20px;
+    }
+  }
+
+  table {
+    margin-top: 20px;
+
+    th,
+    td {
+      height: 50px;
+      line-height: 50px;
+    }
+
+    th {
+      text-align: center;
+      border-top: 1px solid;
+      font-family: "neo-bold";
+      color: #333;
+    }
+
+    td {
+      font-family: "neo-semibold";
+      color: #555;
+    }
+  }
+}

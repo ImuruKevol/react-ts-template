@@ -1,0 +1,14 @@
+<svg id="underline" width="current" height="current" data-name="underline" xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 353 1.83">
+    <defs>
+        <style>
+            .underline-cls-1 {
+                fill: "current";
+            }
+
+        </style>
+    </defs>
+    <path class="underline-cls-1"
+        d="M860,383.79c0,.51-79,.92-176.49.92S507,384.3,507,383.79s79-.91,176.51-.91S860,383.29,860,383.79Z"
+        transform="translate(-506.95 -382.88)" />
+</svg>

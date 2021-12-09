@@ -1,0 +1,21 @@
+@use "./common/color.scss" as color;
+@use "./common/util.scss" as util;
+
+.page-main {
+    .main {
+        width: 1280px;
+        margin: 0 auto;
+
+        menu {
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                width: 150px;
+                border: 1px solid saddlebrown;
+                border-radius: 20px;
+                line-height: 40px;
+                text-align: center;
+            }
+        }
+    }
+}

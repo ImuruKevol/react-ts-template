@@ -1,0 +1,107 @@
+@use "./common/color.scss" as color;
+@use "./common/util.scss" as util;
+
+.ellipsis {
+  @include util.ellipsis(100%);
+}
+
+.checkbox {
+  width: 20px;
+  height: 100%;
+  margin: 0 auto;
+  line-height: 100%;
+
+  input[type="checkbox"] {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.use-status {
+  width: 100%;
+  height: 100%;
+
+  span:first-child {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    border-radius: 7px;
+    margin-right: 15px;
+  }
+
+  .used {
+    background-color: #7cff06;
+  }
+
+  .not-used {
+    background-color: #bababa;
+  }
+}
+
+.table-row-action {
+  width: 100%;
+  height: 100%;
+
+  button {
+    font-family: "neo-semibold";
+    line-height: 28px;
+    color: #aaaaaa;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      vertical-align: text-bottom;
+      margin: 2px 5px 2px 0;
+    }
+
+    &:hover {
+      color: #000;
+
+      &::before {
+        filter: brightness(0);
+      }
+    }
+
+    &.add::before {
+      background: no-repeat left / contain url(img/icon-add.png);
+    }
+
+    &.edit::before {
+      background: no-repeat left / contain url(img/icon-edit.png);
+    }
+
+    &.cancel::before {
+      background: no-repeat left / contain url(img/icon-add.png);
+      transform: rotate(45deg);
+    }
+
+    &.delete::before {
+      background: no-repeat left / contain url(img/icon-delete.png);
+    }
+  }
+
+  button + button {
+    margin-left: 20px;
+  }
+}
+
+.select {
+  height: 42px;
+  position: relative;
+
+  &-arrow {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: -1;
+    line-height: 42px;
+  }
+
+  select.form-control {
+    height: 100%;
+    background-color: transparent;
+  }
+}

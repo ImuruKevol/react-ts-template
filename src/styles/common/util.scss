@@ -1,0 +1,34 @@
+@mixin ellipsis($width) {
+    width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin  ellipsises($width, $height, $line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    word-wrap:break-word;
+    width: $width;
+    line-height: $height;
+    height: $height * $line;
+}
+
+@mixin clear {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin hover($text-color, $bg-color) {
+  &:hover {
+    color: $text-color;
+    background-color: $bg-color;
+    border: 0;
+  }
+}
